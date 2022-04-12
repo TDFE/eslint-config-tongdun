@@ -3,7 +3,7 @@
  * @Author: 郑泳健
  * @Date: 2022-04-11 17:32:00
  * @LastEditors: 郑泳健
- * @LastEditTime: 2022-04-12 16:02:43
+ * @LastEditTime: 2022-04-12 18:54:21
  */
 "use strict";
 module.exports = {
@@ -252,6 +252,14 @@ module.exports = {
         // enum空格风格 a = 1  非 a=1 a =1 a= 1
         'space-infix-ops': 'off',
         // props 校验
-        "react/prop-types": 0
+        "react/prop-types": 0,
+        // 原型内置方法可以使用
+        "no-prototype-builtins": 0,
+        // 循环中包含一个if语句
+        "guard-for-in": 0,
+        // 可以修改入参的值
+        "no-param-reassign": 0,
+        // 可以使用apply
+        "prefer-spread": 0
     }
 }

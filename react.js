@@ -3,7 +3,7 @@
  * @Author: 郑泳健
  * @Date: 2022-04-11 17:33:23
  * @LastEditors: 郑泳健
- * @LastEditTime: 2022-04-12 17:42:39
+ * @LastEditTime: 2022-04-12 18:54:06
  */
 module.exports = {
     extends: [
@@ -58,8 +58,8 @@ module.exports = {
         "react-hooks/rules-of-hooks": "error",
         // 检查 effect 的依赖
         "react-hooks/exhaustive-deps": "warn",
-        // 不允许有console.log
-        "no-console": 1
+        // react组件不需要写dispalyName
+        "react/display-name": 0
     },
     globals: {
         define: true,
