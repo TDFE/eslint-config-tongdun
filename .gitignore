@@ -1,0 +1,12 @@
+package-lock.json
+.DS_Store
+node_modules/
+dist/
+npm-debug.log
+selenium-debug.log
+.idea
+.build
+.project
+.vscode
+/build
+.history
