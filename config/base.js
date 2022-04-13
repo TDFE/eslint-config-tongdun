@@ -3,7 +3,7 @@
  * @Author: 郑泳健
  * @Date: 2022-04-11 17:32:00
  * @LastEditors: 郑泳健
- * @LastEditTime: 2022-04-12 18:54:21
+ * @LastEditTime: 2022-04-13 10:10:01
  */
 "use strict";
 module.exports = {
@@ -15,7 +15,6 @@ module.exports = {
         es6: true,
         es2022: true,
         jest: true,
-        node: true,
         amd: false,
         mocha: false,
         jasmine: false
@@ -260,6 +259,7 @@ module.exports = {
         // 可以修改入参的值
         "no-param-reassign": 0,
         // 可以使用apply
-        "prefer-spread": 0
+        "prefer-spread": 0,
+        "template-curly-spacing" : "off"
     }
 }

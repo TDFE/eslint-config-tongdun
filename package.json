@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-tongdun",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "同盾eslit规范",
   "main": "index.js",
   "scripts": {
@@ -16,7 +16,6 @@
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "5.18.0",
     "@typescript-eslint/parser": "5.18.0",
-    "babel-eslint": "^10.1.0",
     "eslint-config-react-app": "^7.0.0",
     "eslint-config-standard": "^16.0.3",
     "eslint-plugin-import": "2.22.1",
