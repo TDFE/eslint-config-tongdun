@@ -3,7 +3,7 @@
  * @Author: 郑泳健
  * @Date: 2022-04-11 17:32:00
  * @LastEditors: 郑泳健
- * @LastEditTime: 2022-04-14 16:33:47
+ * @LastEditTime: 2022-04-14 17:26:18
  */
 "use strict";
 module.exports = {
@@ -134,7 +134,7 @@ module.exports = {
         // 禁止无效的this，只能用在构造器，类，对象字面量
         "no-invalid-this": 0,
         // 禁止混用tab和空格
-        "no-mixed-spaces-and-tabs": [1, "smart-tabs"],
+        "no-mixed-spaces-and-tabs": 0,
         // 空行最多不能超过1行
         "no-multiple-empty-lines": [1, { max: 2 }],
         // 禁止使用new require
@@ -187,7 +187,7 @@ module.exports = {
         // 要求在逗号后使用一个或多个空格
         "comma-spacing": [1],
         // 强制所有不包含双引号的 JSX 属性值使用双引号
-        "jsx-quotes": [1],
+        "jsx-quotes": 0,//  [1],
         // 禁止在对象字面量的键和冒号之间存在空格{a:a}-> {a: a}
         "key-spacing": [1, { beforeColon: false }],
         // 强制行的每一行最大长度
@@ -234,7 +234,7 @@ module.exports = {
             },
         ],
         // 尽可能地使用单引号
-        quotes: [1, "single"],
+        quotes: 0,// [1, "single"],
         // 注释必须要在代码上方
         "line-comment-position": 0,
         // 可以用 const的 优先使用const，暂时关闭，有些按引用传递的变量写法比较怪异
@@ -262,6 +262,8 @@ module.exports = {
         "prefer-spread": 0,
         "template-curly-spacing" : "off",
         // 顶部可以不用引入React
-		"react/react-in-jsx-scope": 0
+		"react/react-in-jsx-scope": 0,
+        // 正则转义
+        "no-useless-escape": 0
     }
 }
