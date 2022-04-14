@@ -3,7 +3,7 @@
  * @Author: 郑泳健
  * @Date: 2022-04-11 17:32:00
  * @LastEditors: 郑泳健
- * @LastEditTime: 2022-04-13 19:05:19
+ * @LastEditTime: 2022-04-14 16:33:47
  */
 "use strict";
 module.exports = {
@@ -102,7 +102,7 @@ module.exports = {
         // 缩进风格
         indent: [1, 4, { SwitchCase: 1, ignoredNodes: ['TemplateLiteral'] }],
         // 函数名首行大写必须使用new方式调用，首行小写必须用不带new方式调用
-        "new-cap": 1,
+        "new-cap": 0,
         // "max-len": [1, { ignoreComments: true, code: 140, comments: 300 }],
         "max-lines": [1, { max: 500, skipBlankLines: true, skipComments: true }],
         // 函数最长是200行
@@ -112,7 +112,7 @@ module.exports = {
         // 禁止在条件表达式中使用赋值语句
         "no-cond-assign": ["warn", "always"],
         // 禁止catch子句参数与外部作用域变量同名
-        "no-catch-shadow": 1,
+        "no-catch-shadow": 0,
         // 禁止给类赋值
         "no-class-assign": 1,
         // 禁止在条件中使用常量表达式
@@ -236,11 +236,16 @@ module.exports = {
         // 尽可能地使用单引号
         quotes: [1, "single"],
         // 注释必须要在代码上方
-        "line-comment-position": 1,
+        "line-comment-position": 0,
         // 可以用 const的 优先使用const，暂时关闭，有些按引用传递的变量写法比较怪异
         "prefer-const": 0,
         // TODO 函数参数定义了未使用的变量 有些变量顺序调整了会有影响，暂时关闭
-        'no-unused-vars': "error",
+        'no-unused-vars': [
+			"error",
+			{
+				"varsIgnorePattern": "^[A-Z]"
+			}
+		],
         // 在调用之前声明 关闭
         "no-use-before-define": 0,
         // enum空格风格 a = 1  非 a=1 a =1 a= 1
@@ -255,6 +260,8 @@ module.exports = {
         "no-param-reassign": 0,
         // 可以使用apply
         "prefer-spread": 0,
-        "template-curly-spacing" : "off"
+        "template-curly-spacing" : "off",
+        // 顶部可以不用引入React
+		"react/react-in-jsx-scope": 0
     }
 }

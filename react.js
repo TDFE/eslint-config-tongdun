@@ -3,7 +3,7 @@
  * @Author: 郑泳健
  * @Date: 2022-04-11 17:33:23
  * @LastEditors: 郑泳健
- * @LastEditTime: 2022-04-13 23:18:11
+ * @LastEditTime: 2022-04-14 16:32:41
  */
 module.exports = {
     extends: [
@@ -73,7 +73,7 @@ module.exports = {
         // 检查 Hook 的规则
         "react-hooks/rules-of-hooks": "error",
         // 检查 effect 的依赖
-        "react-hooks/exhaustive-deps": "warn",
+        "react-hooks/exhaustive-deps": 0,
         // react组件不需要写dispalyName
         "react/display-name": 0,
         'react/no-unescaped-entities': 0,
