@@ -3,16 +3,32 @@
  * @Author: 郑泳健
  * @Date: 2022-04-11 17:33:23
  * @LastEditors: 郑泳健
- * @LastEditTime: 2022-04-12 18:54:06
+ * @LastEditTime: 2022-04-13 23:18:11
  */
 module.exports = {
     extends: [
         'eslint:recommended',
         'plugin:react/recommended',
-        'plugin:react/jsx-runtime',
         './config/base',
     ],
     plugins: ['react', 'jsx-a11y', 'react-hooks'],
+    parser: '@babel/eslint-parser',
+    parserOptions: {
+        ecmaVersion: 2018,
+        sourceType: 'module',
+        requireConfigFile: false,
+        babelOptions: {
+            presets: [require.resolve('babel-preset-react-app/prod')],
+            plugins: [
+                [
+                    "@babel/plugin-proposal-decorators",
+                    {
+                        "legacy": true
+                    }
+                ]
+            ]
+        },
+    },
     rules: {
         // 禁止直接修改 state
         "react/no-direct-mutation-state": 1,
@@ -59,11 +75,8 @@ module.exports = {
         // 检查 effect 的依赖
         "react-hooks/exhaustive-deps": "warn",
         // react组件不需要写dispalyName
-        "react/display-name": 0
-    },
-    globals: {
-        define: true,
-        module: true
+        "react/display-name": 0,
+        'react/no-unescaped-entities': 0,
     }
 }
 

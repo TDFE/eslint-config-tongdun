@@ -1,4 +1,3 @@
-
 ### 解决的问题
 
 - 统一团队代码规范，解决一些潜在bug
@@ -21,7 +20,9 @@ npm install eslint@^8.13.0 --save-dev
 
 ``` javascript
 {
- // react工程使用["tongdun/react"] vue工程使用["tongdun/vue"] typescript工程使用["tongdun/typescript"]
+ // react工程使用["tongdun/react"] vue工程使用["tongdun/vue"]
+ // typescript项目可以在后面添加typescript规则
+ // "extends":["tongdun/react", "tongdun/typescript"],
     "extends":["tongdun/react"],
  // 这里可以覆盖规则包里面的规则，比如默认每个函数最长不超过200，如果老项目超过了，就可以自定义修改
     "rules": {

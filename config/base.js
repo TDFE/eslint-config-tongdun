@@ -3,7 +3,7 @@
  * @Author: 郑泳健
  * @Date: 2022-04-11 17:32:00
  * @LastEditors: 郑泳健
- * @LastEditTime: 2022-04-13 10:10:01
+ * @LastEditTime: 2022-04-13 19:05:19
  */
 "use strict";
 module.exports = {
@@ -19,14 +19,9 @@ module.exports = {
         mocha: false,
         jasmine: false
     },
-    parserOptions: {
-        "ecmaVersion": 12,
-        "sourceType": "module",
-        "ecmaFeatures": {
-            "jsx": true,
-            "impliedStrict": true,
-            "experimentalObjectRestSpread": true
-        }
+    globals: {
+        define: true,
+        module: true
     },
     rules: {
         // 不允许在 case 子句中使用词法声明

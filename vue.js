@@ -3,7 +3,7 @@
  * @Author: 郑泳健
  * @Date: 2022-04-11 17:34:49
  * @LastEditors: 郑泳健
- * @LastEditTime: 2022-04-12 17:40:32
+ * @LastEditTime: 2022-04-13 19:04:57
  */
 
 module.exports = {
@@ -13,12 +13,23 @@ module.exports = {
         'plugin:vue/recommended',
         './config/base'
     ],
+    parser: 'vue-eslint-parser',
+    parserOptions: {
+        sourceType: 'module',
+        requireConfigFile: false,
+        babelOptions: {
+            plugins: [
+                [
+                    "@babel/plugin-proposal-decorators",
+                    {
+                        "legacy": true
+                    }
+                ]
+            ]
+        },
+    },
     plugins: ['vue'],
     rules: {
 
-    },
-    globals: {
-        define: true,
-        module: true
     }
 }
