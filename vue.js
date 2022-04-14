@@ -3,13 +3,12 @@
  * @Author: 郑泳健
  * @Date: 2022-04-11 17:34:49
  * @LastEditors: 郑泳健
- * @LastEditTime: 2022-04-13 19:04:57
+ * @LastEditTime: 2022-04-14 16:37:43
  */
 
 module.exports = {
     extends: [
         'eslint:recommended',
-        'standard',
         'plugin:vue/recommended',
         './config/base'
     ],
