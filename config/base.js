@@ -3,7 +3,7 @@
  * @Author: 郑泳健
  * @Date: 2022-04-11 17:32:00
  * @LastEditors: 郑泳健
- * @LastEditTime: 2022-04-14 17:54:00
+ * @LastEditTime: 2022-04-15 12:52:58
  */
 "use strict";
 module.exports = {
@@ -130,7 +130,7 @@ module.exports = {
         // 禁止重复的函数声明
         "no-func-assign": "warn",
         // 禁止重复模块导入
-        "no-duplicate-imports": 1,
+        "no-duplicate-imports": "error",
         // 禁止无效的this，只能用在构造器，类，对象字面量
         "no-invalid-this": 0,
         // 禁止混用tab和空格
@@ -241,7 +241,7 @@ module.exports = {
         "prefer-const": 0,
         // TODO 函数参数定义了未使用的变量 有些变量顺序调整了会有影响，暂时关闭
         'no-unused-vars': [
-			"error",
+			"warn",
 			{
 				"varsIgnorePattern": "React"
 			}
