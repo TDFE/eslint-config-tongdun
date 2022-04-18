@@ -3,7 +3,7 @@
  * @Author: 郑泳健
  * @Date: 2022-04-11 17:32:00
  * @LastEditors: 郑泳健
- * @LastEditTime: 2022-04-15 12:52:58
+ * @LastEditTime: 2022-04-18 15:19:17
  */
 "use strict";
 module.exports = {
@@ -264,6 +264,7 @@ module.exports = {
         // 顶部可以不用引入React
 		"react/react-in-jsx-scope": 0,
         // 正则转义
-        "no-useless-escape": 0
+        "no-useless-escape": 0,
+        "no-empty-pattern": 0
     }
 }

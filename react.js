@@ -3,7 +3,7 @@
  * @Author: 郑泳健
  * @Date: 2022-04-11 17:33:23
  * @LastEditors: 郑泳健
- * @LastEditTime: 2022-04-14 16:32:41
+ * @LastEditTime: 2022-04-18 16:05:16
  */
 module.exports = {
     extends: [
@@ -71,12 +71,14 @@ module.exports = {
         // a 标签 可不填href
         "jsx-a11y/anchor-is-valid": 0,
         // 检查 Hook 的规则
-        "react-hooks/rules-of-hooks": "error",
+        "react-hooks/rules-of-hooks": 0,
         // 检查 effect 的依赖
         "react-hooks/exhaustive-deps": 0,
         // react组件不需要写dispalyName
         "react/display-name": 0,
         'react/no-unescaped-entities': 0,
+        // react 不能用this.ref
+        "react/no-string-refs": 0
     }
 }
 
