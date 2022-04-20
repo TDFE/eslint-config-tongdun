@@ -131,7 +131,7 @@ module.exports = {
         // 禁止对null使用==或!=运算符
         "no-eq-null": 1,
         // 禁止非必要的括号
-        "no-extra-parens": [1, "all", { nestedBinaryExpressions: false }],
+        "no-extra-parens": 0, // [1, "all", { nestedBinaryExpressions: false }],
         // 禁止多余的冒号
         "no-extra-semi": 1,
         // 禁止重复的函数声明
@@ -273,7 +273,21 @@ module.exports = {
         // 正则转义
         "no-useless-escape": 0,
         "no-empty-pattern": 0,
-        "prettier/prettier": "error",
+        "prettier/prettier": [
+            "error",
+            {
+                endOfLine: "auto",
+                printWidth: 140,
+                semi: true,
+                jsxSingleQuote: false,
+                singleQuote: true,
+                "editor.tabSize": 4,
+                eslintIntegration: true,
+                tabWidth: 4,
+                parser: "flow",
+                jsxBracketSameLine: true,
+            },
+        ],
         "arrow-body-style": "off",
         "prefer-arrow-callback": "off",
     },
