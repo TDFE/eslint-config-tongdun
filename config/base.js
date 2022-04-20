@@ -7,7 +7,8 @@
  */
 "use strict";
 module.exports = {
-    plugins: ['import'],
+    plugins: ["import", "prettier"],
+    extends: ["plugin:prettier/recommended"],
     env: {
         browser: true,
         node: true,
@@ -17,11 +18,11 @@ module.exports = {
         jest: true,
         amd: false,
         mocha: false,
-        jasmine: false
+        jasmine: false,
     },
     globals: {
         define: true,
-        module: true
+        module: true,
     },
     rules: {
         // 不允许在 case 子句中使用词法声明
@@ -33,7 +34,7 @@ module.exports = {
         // 禁止数字字面量中使用前导和末尾小数点
         "no-floating-decimal": 1,
         // 禁止使用短符号进行类型转换 忽略 !!
-        "no-implicit-coercion": [1, { "allow": ["!!"] }],
+        "no-implicit-coercion": [1, { allow: ["!!"] }],
         // 禁止对函数参数再赋值
         "no-param-reassign": 1,
         // 禁止使用多个空格
@@ -55,7 +56,7 @@ module.exports = {
         // 禁止不必要的布尔转换
         "no-extra-boolean-cast": 1,
         // 导出不能只有一个default
-        'import/no-anonymous-default-export': 0,
+        "import/no-anonymous-default-export": 0,
         // 禁止直接调用 Object.prototypes 的内置属性
         "no-prototype-builtins": 1,
         // 禁止不规则的空白
@@ -100,13 +101,19 @@ module.exports = {
         // 必须使用全等
         eqeqeq: 1,
         // 缩进风格
-        indent: [1, 4, { SwitchCase: 1, ignoredNodes: ['TemplateLiteral'] }],
+        indent: [1, 4, { SwitchCase: 1, ignoredNodes: ["TemplateLiteral"] }],
         // 函数名首行大写必须使用new方式调用，首行小写必须用不带new方式调用
         "new-cap": 0,
         // "max-len": [1, { ignoreComments: true, code: 140, comments: 300 }],
-        "max-lines": [1, { max: 500, skipBlankLines: true, skipComments: true }],
+        "max-lines": [
+            1,
+            { max: 500, skipBlankLines: true, skipComments: true },
+        ],
         // 函数最长是200行
-        "max-lines-per-function": ["error", { "max": 200, "skipBlankLines": true, 'skipComments': true }],
+        "max-lines-per-function": [
+            "error",
+            { max: 200, skipBlankLines: true, skipComments: true },
+        ],
         // 禁止使用数组构造器
         "no-array-constructor": 1,
         // 禁止在条件表达式中使用赋值语句
@@ -240,16 +247,16 @@ module.exports = {
         // 可以用 const的 优先使用const，暂时关闭，有些按引用传递的变量写法比较怪异
         "prefer-const": 0,
         // TODO 函数参数定义了未使用的变量 有些变量顺序调整了会有影响，暂时关闭
-        'no-unused-vars': [
-			"warn",
-			{
-				"varsIgnorePattern": "React"
-			}
-		],
+        "no-unused-vars": [
+            "warn",
+            {
+                varsIgnorePattern: "React",
+            },
+        ],
         // 在调用之前声明 关闭
         "no-use-before-define": 0,
         // enum空格风格 a = 1  非 a=1 a =1 a= 1
-        'space-infix-ops': 'off',
+        "space-infix-ops": "off",
         // props 校验
         "react/prop-types": 0,
         // 原型内置方法可以使用
@@ -260,11 +267,14 @@ module.exports = {
         "no-param-reassign": 0,
         // 可以使用apply
         "prefer-spread": 0,
-        "template-curly-spacing" : "off",
+        "template-curly-spacing": "off",
         // 顶部可以不用引入React
-		"react/react-in-jsx-scope": 0,
+        "react/react-in-jsx-scope": 0,
         // 正则转义
         "no-useless-escape": 0,
-        "no-empty-pattern": 0
-    }
-}
+        "no-empty-pattern": 0,
+        "prettier/prettier": "error",
+        "arrow-body-style": "off",
+        "prefer-arrow-callback": "off",
+    },
+};

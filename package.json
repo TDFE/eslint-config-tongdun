@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-tongdun",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "同盾eslit规范",
   "main": "index.js",
   "scripts": {
@@ -14,13 +14,15 @@
     "url": "git@gitlab.tongdun.cn:tdfe/eslint-config-tongdun.git"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "5.18.0",
-    "@typescript-eslint/parser": "5.18.0",
     "@babel/eslint-parser": "^7.17.0",
     "@babel/plugin-proposal-decorators": "^7.17.9",
+    "@typescript-eslint/eslint-plugin": "5.18.0",
+    "@typescript-eslint/parser": "5.18.0",
     "babel-preset-react-app": "^10.0.1",
+    "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-import": "2.26.0",
     "eslint-plugin-jsx-a11y": "6.4.1",
+    "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "7.22.0",
     "eslint-plugin-react-hooks": "4.4.0",
     "eslint-plugin-vue": "^8.6.0"
