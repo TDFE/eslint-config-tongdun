@@ -7,7 +7,8 @@
  */
 "use strict";
 module.exports = {
-    plugins: ["import"],
+    plugins: ["import", "prettier"],
+    extends: ["plugin:prettier/recommended"],
     env: {
         browser: true,
         node: true,
@@ -41,7 +42,7 @@ module.exports = {
         // 禁用不必要的 .call() 和 .apply()
         "no-useless-call": 1,
         // 禁用嵌套的三元表达式 可读性很差
-        "no-nested-ternary": 1,
+        "no-nested-ternary": 0,
         // 禁止多余的 return 语句
         "no-useless-return": 1,
         // 禁止可以表达为更简单结构的三元操作符
@@ -103,20 +104,12 @@ module.exports = {
         indent: [1, 4, { SwitchCase: 1, ignoredNodes: ["TemplateLiteral"] }],
         // 函数名首行大写必须使用new方式调用，首行小写必须用不带new方式调用
         "new-cap": 0,
-        // "max-len": [1, { ignoreComments: true, code: 140, comments: 300 }],
-        "max-lines": [
-            1,
-            { max: 500, skipBlankLines: true, skipComments: true },
-        ],
-        // 函数最长是200行
-        "max-lines-per-function": [
-            "error",
-            { max: 200, skipBlankLines: true, skipComments: true },
-        ],
+        "max-lines": 0,
+        "max-lines-per-function": 0,
         // 禁止使用数组构造器
         "no-array-constructor": 1,
         // 禁止在条件表达式中使用赋值语句
-        "no-cond-assign": ["warn", "always"],
+        "no-cond-assign": 0, // ["warn", "always"],
         // 禁止catch子句参数与外部作用域变量同名
         "no-catch-shadow": 0,
         // 禁止给类赋值
@@ -130,7 +123,7 @@ module.exports = {
         // 禁止对null使用==或!=运算符
         "no-eq-null": 1,
         // 禁止非必要的括号
-        "no-extra-parens": [1, "all", { nestedBinaryExpressions: false }],
+        "no-extra-parens": 0, //[1, "all", { nestedBinaryExpressions: false }],
         // 禁止多余的冒号
         "no-extra-semi": 1,
         // 禁止重复的函数声明
@@ -197,22 +190,23 @@ module.exports = {
         // 禁止在对象字面量的键和冒号之间存在空格{a:a}-> {a: a}
         "key-spacing": [1, { beforeColon: false }],
         // 强制行的每一行最大长度
-        "max-len": [
-            1,
-            {
-                code: 140,
-                // 忽略所有拖尾注释和行内注释
-                ignoreComments: true,
-                // 忽略包含URL的行
-                ignoreUrls: true,
-                // 忽略含有双引号或单引号字符串的行
-                ignoreStrings: true,
-                // 忽略包含模板字面量的行
-                ignoreTemplateLiterals: true,
-                // 忽略包含正则表达式的行
-                ignoreRegExpLiterals: true,
-            },
-        ],
+        "max-len": 0,
+        // "max-len": [
+        //     1,
+        //     {
+        //         code: 140,
+        //         // 忽略所有拖尾注释和行内注释
+        //         ignoreComments: true,
+        //         // 忽略包含URL的行
+        //         ignoreUrls: true,
+        //         // 忽略含有双引号或单引号字符串的行
+        //         ignoreStrings: true,
+        //         // 忽略包含模板字面量的行
+        //         ignoreTemplateLiterals: true,
+        //         // 忽略包含正则表达式的行
+        //         ignoreRegExpLiterals: true,
+        //     },
+        // ],
         // 导入包排序
         "import/order": [
             "warn",
@@ -272,22 +266,22 @@ module.exports = {
         // 正则转义
         "no-useless-escape": 0,
         "no-empty-pattern": 0,
-        // "prettier/prettier": [
-        //     "error",
-        //     {
-        //         endOfLine: "auto",
-        //         printWidth: 140,
-        //         semi: true,
-        //         jsxSingleQuote: false,
-        //         singleQuote: true,
-        //         "editor.tabSize": 4,
-        //         eslintIntegration: true,
-        //         tabWidth: 4,
-        //         parser: "flow",
-        //         jsxBracketSameLine: true,
-        //     },
-        // ],
-        // "arrow-body-style": "off",
-        // "prefer-arrow-callback": "off",
+        "prettier/prettier": [
+            "error",
+            {
+                endOfLine: "auto",
+                printWidth: 140,
+                semi: true,
+                jsxSingleQuote: false,
+                singleQuote: true,
+                "editor.tabSize": 4,
+                eslintIntegration: true,
+                tabWidth: 4,
+                parser: "flow",
+                jsxBracketSameLine: true,
+            },
+        ],
+        "arrow-body-style": "off",
+        "prefer-arrow-callback": "off",
     },
 };

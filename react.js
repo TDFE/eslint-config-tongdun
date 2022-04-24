@@ -39,7 +39,7 @@ module.exports = {
         // 循环元素必须有key
         "react/jsx-key": 1,
         // jsx结束标签对齐
-        "react/jsx-closing-bracket-location": [1, "line-aligned"],
+        "react/jsx-closing-bracket-location": 0, // [1, "line-aligned"],
         // jsx return 值强制用括号括起来
         "react/jsx-wrap-multilines": [
             1,
