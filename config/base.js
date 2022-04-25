@@ -119,7 +119,7 @@ module.exports = {
         "no-constant-condition": 1,
         // 禁debugger
         "no-debugger": 2,
-        "no-console": 2,
+        "no-console": 1,
         // 如果if语句里面有return,后面不能跟else语句
         "no-else-return": 2,
         // 禁止对null使用==或!=运算符
@@ -254,23 +254,9 @@ module.exports = {
         // 正则转义
         "no-useless-escape": 0,
         "no-empty-pattern": 0,
-        "prettier/prettier": [
-            1,
-            {
-                endOfLine: "auto",
-                printWidth: 140,
-                semi: true,
-                jsxSingleQuote: false,
-                singleQuote: true,
-                "editor.tabSize": 4,
-                eslintIntegration: true,
-                tabWidth: 4,
-                parser: "flow",
-                jsxBracketSameLine: true,
-
-            },
-        ],
         "arrow-body-style": "off",
         "prefer-arrow-callback": "off",
+        "comma-dangle": 0,
+        "require-yield": 0
     },
 };
