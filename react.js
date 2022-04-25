@@ -41,19 +41,7 @@ module.exports = {
         // jsx结束标签对齐
         "react/jsx-closing-bracket-location": 0, // [1, "line-aligned"],
         // jsx return 值强制用括号括起来
-        "react/jsx-wrap-multilines": [
-            1,
-            {
-                declaration: "ignore",
-                assignment: "ignore",
-                // return 后面的 jsx 需要用括号包起来
-                return: "parens-new-line",
-                arrow: "ignore",
-                condition: "ignore",
-                logical: "ignore",
-                prop: "ignore",
-            },
-        ],
+        "react/jsx-wrap-multilines": 0,
         // 带有target='_blank' 的a标签不强制填写 rel='noreferrer'
         "react/jsx-no-target-blank": 0,
         "react/jsx-filename-extension": [

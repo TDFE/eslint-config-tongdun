@@ -160,21 +160,7 @@ module.exports = {
         // 中缀操作符周围要不要有空格
         "space-infix-ops": 1,
         // 注释风格要不要有空格什么的
-        "spaced-comment": [
-            1,
-            "always",
-            {
-                line: {
-                    markers: ["/"],
-                    exceptions: ["-", "+"],
-                },
-                block: {
-                    markers: ["!"],
-                    exceptions: ["*"],
-                    balanced: true,
-                },
-            },
-        ],
+        "spaced-comment": 0,
         // var必须放在作用域顶部
         "vars-on-top": 1,
         // 块级{}前后空格
