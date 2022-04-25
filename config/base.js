@@ -269,7 +269,7 @@ module.exports = {
         "no-useless-escape": 0,
         "no-empty-pattern": 0,
         "prettier/prettier": [
-            "error",
+            1,
             {
                 endOfLine: "auto",
                 printWidth: 140,
