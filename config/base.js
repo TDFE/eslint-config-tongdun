@@ -50,11 +50,11 @@ module.exports = {
         // 禁止在返回语句中赋值
         "no-return-assign": [1, "always"],
         // 要求 for-in 循环中有一个 if 语句  {}.hasOwnProperty.call(foo, key)
-        "guard-for-in": 1,
+        "guard-for-in": 0,
         // 禁止将 await 写在循环里
-        "no-await-in-loop": 1,
+        "no-await-in-loop": 0,
         // 禁止不必要的布尔转换
-        "no-extra-boolean-cast": 1,
+        "no-extra-boolean-cast": 0,
         // 导出不能只有一个default
         "import/no-anonymous-default-export": 0,
         // 禁止直接调用 Object.prototypes 的内置属性
@@ -62,7 +62,7 @@ module.exports = {
         // 禁止不规则的空白
         "no-irregular-whitespace": 1,
         // 要求使用扩展运算符而非 .apply()
-        "prefer-spread": 1,
+        "prefer-spread": 0,
         // 禁止使用 __proto__
         "no-proto": 1,
         // 禁止使用 __iterator__
@@ -70,7 +70,7 @@ module.exports = {
         // if 后面必须要有 {，除非是单行 if
         curly: [1, "multi-line", "consistent"],
         // 必须使用 isNaN(foo) 而不是 foo === NaN
-        "use-isnan": 1,
+        "use-isnan": 2,
         // 禁止将 await 或 yield 的结果做为运算符的后面项
         "require-atomic-updates": 1,
         // 禁止出现难以理解的多行表达式
@@ -78,12 +78,12 @@ module.exports = {
         // 禁止在普通字符串中出现模版字符串里的变量形式，如 'Hello ${name}!'
         "no-template-curly-in-string": 1,
         // 禁止在数组中出现连续的逗号，如 let foo = [,,]
-        "no-sparse-arrays": 1,
+        "no-sparse-arrays": 0,
         // 禁止在 if 代码块内出现函数声明
-        "no-inner-declarations": [1, "both"],
+        "no-inner-declarations": 0, //[1, "both"],
         // 禁止出现空代码块，允许 catch 为空代码块
         "no-empty": [
-            1,
+            2,
             {
                 allowEmptyCatch: true,
             },
@@ -101,7 +101,8 @@ module.exports = {
         // 必须使用全等
         eqeqeq: 1,
         // 缩进风格
-        indent: [1, 4, { SwitchCase: 1, ignoredNodes: ["TemplateLiteral"] }],
+        indent: 0,
+        // indent: [1, 4, { SwitchCase: 1, ignoredNodes: ["TemplateLiteral"] }],
         // 函数名首行大写必须使用new方式调用，首行小写必须用不带new方式调用
         "new-cap": 0,
         "max-lines": 0,
@@ -117,19 +118,20 @@ module.exports = {
         // 禁止在条件中使用常量表达式
         "no-constant-condition": 1,
         // 禁debugger
-        "no-debugger": 1,
+        "no-debugger": 2,
+        "no-console": 2,
         // 如果if语句里面有return,后面不能跟else语句
-        "no-else-return": 1,
+        "no-else-return": 2,
         // 禁止对null使用==或!=运算符
-        "no-eq-null": 1,
+        "no-eq-null": 2,
         // 禁止非必要的括号
         "no-extra-parens": 0, //[1, "all", { nestedBinaryExpressions: false }],
         // 禁止多余的冒号
-        "no-extra-semi": 1,
+        "no-extra-semi": 2,
         // 禁止重复的函数声明
-        "no-func-assign": "warn",
+        "no-func-assign": 2,
         // 禁止重复模块导入
-        "no-duplicate-imports": "error",
+        "no-duplicate-imports": 2,
         // 禁止无效的this，只能用在构造器，类，对象字面量
         "no-invalid-this": 0,
         // 禁止混用tab和空格
@@ -145,11 +147,11 @@ module.exports = {
         // 变量初始化时不能直接给它赋值为undefined
         "no-undef-init": 1,
         // 禁用void操作符
-        "no-void": 1,
+        "no-void": 0,
         // 变量声明后是否需要空一行
         "newline-after-var": 0,
         // 换行时运算符在行尾还是行首
-        "operator-linebreak": [1, "after"],
+        "operator-linebreak": 0, //[1, "after"],
         radix: "warn",
         // 语句强制分号结尾
         semi: [1, "always"],
@@ -209,7 +211,7 @@ module.exports = {
         // ],
         // 导入包排序
         "import/order": [
-            "warn",
+            "error",
             {
                 groups: [
                     "builtin",
@@ -234,7 +236,7 @@ module.exports = {
             },
         ],
         // 尽可能地使用单引号
-        quotes: [1, "single"],
+        quotes: [2, "single"],
         // 注释必须要在代码上方
         "line-comment-position": 0,
         // 可以用 const的 优先使用const，暂时关闭，有些按引用传递的变量写法比较怪异
@@ -279,6 +281,7 @@ module.exports = {
                 tabWidth: 4,
                 parser: "flow",
                 jsxBracketSameLine: true,
+
             },
         ],
         "arrow-body-style": "off",
