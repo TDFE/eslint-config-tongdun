@@ -8,13 +8,16 @@
 
 module.exports = {
     extends: [
+        "plugin:vue/vue3-essential",
         'eslint:recommended',
-        'plugin:vue/recommended',
         './config/base'
     ],
+    plugins: ['vue'],
     parser: 'vue-eslint-parser',
     parserOptions: {
+        "parser": "@babel/eslint-parser",
         sourceType: 'module',
+        "ecmaVersion": 2021,
         requireConfigFile: false,
         babelOptions: {
             plugins: [
@@ -27,8 +30,8 @@ module.exports = {
             ]
         },
     },
-    plugins: ['vue'],
-    rules: {
-
+    globals: {
+        "__WEEX__": true,
+        "WXEnvironment": true
     }
 }

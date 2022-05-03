@@ -8,7 +8,7 @@
 module.exports = {
     extends: [
         'eslint:recommended',
-        'plugin:react/recommended',
+        'plugin:@typescript-eslint/recommended',
         './config/base'
     ],
     overrides: [
@@ -16,7 +16,7 @@ module.exports = {
             files: ['*.ts', '*.tsx'],
             parser: '@typescript-eslint/parser',
             parserOptions: {
-                ecmaVersion: 2018,
+                ecmaVersion: 2021,
                 sourceType: 'module',
                 ecmaFeatures: {
                     jsx: true,

@@ -14,7 +14,7 @@ module.exports = {
         node: true,
         commonjs: true,
         es6: true,
-        es2022: true,
+        es2021: true,
         jest: true,
         amd: false,
         mocha: false,
