@@ -13,7 +13,7 @@ module.exports = {
     ],
     overrides: [
         {
-            files: ['*.ts', '*.tsx'],
+            files: ['**/*.ts?(x)'],
             parser: '@typescript-eslint/parser',
             parserOptions: {
                 ecmaVersion: 2021,
@@ -25,27 +25,6 @@ module.exports = {
             },
             plugins: ['@typescript-eslint'],
             rules: {
-                'constructor-super': 'off',
-                'getter-return': 'off',
-                'no-const-assign': 'off',
-                'no-dupe-args': 'off',
-                'no-dupe-class-members': 'off',
-                'no-dupe-keys': 'off',
-                'no-func-assign': 'off',
-                'no-import-assign': 'off',
-                'no-new-symbol': 'off',
-                'no-obj-calls': 'off',
-                'no-redeclare': 'off',
-                'no-setter-return': 'off',
-                'no-this-before-super': 'off',
-                'no-undef': 'off',
-                'no-unreachable': 'off',
-                'no-unsafe-negation': 'off',
-                'no-var': 'error',
-                'prefer-const': 'error',
-                'prefer-rest-params': 'error',
-                'prefer-spread': 'error',
-                'valid-typeof': 'off', // ts(2367)
                 /** @typescript-eslint/eslint-plugin recommended配置 start  */
                 '@typescript-eslint/adjacent-overload-signatures': 'error',
                 '@typescript-eslint/ban-ts-comment': 'error',
@@ -56,7 +35,6 @@ module.exports = {
                 'no-empty-function': 'off',
                 '@typescript-eslint/no-empty-function': 'error',
                 '@typescript-eslint/no-empty-interface': 'error',
-                '@typescript-eslint/no-explicit-any': 'warn',
                 '@typescript-eslint/no-extra-non-null-assertion': 'error',
                 'no-extra-semi': 'off',
                 '@typescript-eslint/no-extra-semi': 'error',
@@ -112,7 +90,7 @@ module.exports = {
                 // 可以自动推断的类型 如 number 、boolean 、string 等 也能写类型
                 "@typescript-eslint/no-inferrable-types": 0,
                 // 不允许写any 用 unknown 代替 any，一定要写any可以在代码上方写注释 eslint-disable-next-line 进行忽略本行校验
-                "@typescript-eslint/no-explicit-any": 1,
+                "@typescript-eslint/no-explicit-any": 0,
                 // 允许使用@ts-<directive>注释或在指令后要求描述
                 "@typescript-eslint/ban-ts-comment": 0,
                 // Interface 名称必须是驼峰  关闭
