@@ -1,6 +1,6 @@
 {
     "name": "eslint-config-tongdun",
-    "version": "1.1.9",
+    "version": "1.1.10",
     "description": "同盾eslit规范",
     "main": "index.js",
     "scripts": {
