@@ -1,5 +1,5 @@
 /*
- * @Descripttion: js相关配置
+ * @Descripttion: node相关配置
  * @Author: 郑泳健
  * @Date: 2022-04-11 17:33:23
  * @LastEditors: 郑泳健
