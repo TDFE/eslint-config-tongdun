@@ -3,7 +3,7 @@
  * @Author: 郑泳健
  * @Date: 2022-04-11 17:32:00
  * @LastEditors: 郑泳健
- * @LastEditTime: 2022-04-18 15:19:17
+ * @LastEditTime: 2022-07-18 13:44:58
  */
 "use strict";
 module.exports = {
@@ -196,31 +196,31 @@ module.exports = {
         //     },
         // ],
         // 导入包排序
-        "import/order": [
-            "error",
-            {
-                groups: [
-                    "builtin",
-                    "external",
-                    "unknown",
-                    "parent",
-                    "sibling",
-                    "index",
-                ],
-                pathGroups: [
-                    {
-                        pattern: "@/**",
-                        group: "unknown",
-                    },
-                    {
-                        pattern: "@yt/**",
-                        group: "external",
-                        position: "after",
-                    },
-                ],
-                pathGroupsExcludedImportTypes: ["builtin"],
-            },
-        ],
+        // "import/order": [
+        //     "error",
+        //     {
+        //         groups: [
+        //             "builtin",
+        //             "external",
+        //             "unknown",
+        //             "parent",
+        //             "sibling",
+        //             "index",
+        //         ],
+        //         pathGroups: [
+        //             {
+        //                 pattern: "@/**",
+        //                 group: "unknown",
+        //             },
+        //             {
+        //                 pattern: "@yt/**",
+        //                 group: "external",
+        //                 position: "after",
+        //             },
+        //         ],
+        //         pathGroupsExcludedImportTypes: ["builtin"],
+        //     },
+        // ],
         // 尽可能地使用单引号
         quotes: [2, "single"],
         // 注释必须要在代码上方
