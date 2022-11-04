@@ -3,7 +3,7 @@
  * @Author: 郑泳健
  * @Date: 2022-04-11 17:33:23
  * @LastEditors: 郑泳健
- * @LastEditTime: 2022-04-18 16:05:16
+ * @LastEditTime: 2022-11-04 15:41:03
  */
 module.exports = {
     extends: [
@@ -53,7 +53,7 @@ module.exports = {
         // react 结束标签自动闭合
         "react/self-closing-comp": 1,
         // react 属性间最多一个空格
-        "react/jsx-props-no-multi-spaces": 1,
+        "react/jsx-props-no-multi-spaces": 0,
         // react 识别不认识的属性 class --> className
         "react/no-unknown-property": 1,
         // a 标签 可不填href
